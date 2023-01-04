@@ -1,0 +1,15 @@
+.yellow-button {
+    background-color: yellow;
+    border: 2px solid green;
+    width: 40%;
+    padding: 12px;
+}
+
+/* this button is blue actually */
+.red-button {
+    background-color: blue;
+    border: 2px solid green;
+    width: 40%;
+    padding: 12px;
+    color: white;
+}
