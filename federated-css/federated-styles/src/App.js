@@ -4,7 +4,7 @@ import TailwindButton from './Tailwind-button';
 
 const App = () => (
   <div>
-    <h1>Nested</h1>
+    <h1>Federated Styles</h1>
     <h2>App 3</h2>
     <button className="red-button"> Red Button</button>
     <TailwindButton />

@@ -27,39 +27,8 @@ module.exports = {
       {
         test: /\.css$/,
         use: ["style-loader", "css-loader"],
-      },
-      {
-        test: /\.s[ac]ss$/i,
-        use: [
-          // Creates `style` nodes from JS strings
-          "style-loader",
-          // Translates CSS into CommonJS
-          "css-loader",
-            // "resolve-url-loader",
-          // Compiles Sass to CSS
-          {
-            loader: 'sass-loader',
-            // options: {
-            //   webpackImporter: false,
-            //   sassOptions: {
-            //     importer: function(a,b,c) {
-            //       console.log(1111, a);
-            //       require('http:' + getRemoteEntryUrl(3004)).then(a => {
-            //         console.log(2222, a);
-            //       });
-            //
-            //     }
-            //   }
-            // }
-          }
-        ],
-      },
+      }
     ],
-    // resolve: {
-    //   alias: {
-    //     'federated_styles_files@': require('http:' + getRemoteEntryUrl(3005)),
-    //   },
-    // },
   },
   plugins: [
     new ModuleFederationPlugin({
