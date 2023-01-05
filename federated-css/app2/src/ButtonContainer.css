@@ -1,0 +1,7 @@
+.black-button {
+    border: var(--button-border);
+    width: var(--button-width);
+    padding: var(--button-padding);
+    background-color: black;
+    color: white;
+}

@@ -3,7 +3,7 @@ import {createUseStyles} from 'react-jss';
 const styles = createUseStyles({
     button : {
         border : '2px solid green',
-        width: '40%',
+        width: '50%',
         padding: 12,
         backgroundColor: 'aquamarine',
     },

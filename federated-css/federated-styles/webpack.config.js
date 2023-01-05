@@ -26,15 +26,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ["style-loader", "css-loader"],
-      },
-      {
-        test: /\.shared\.s[ac]ss$/i,
-        use: [
-          {
-            loader: 'file-loader',
-          },
-        ],
+        use: ["style-loader", "css-loader", "postcss-loader"],
       },
       {
         test: /\.s[ac]ss$/i,
@@ -47,6 +39,17 @@ module.exports = {
           "sass-loader",
         ],
       },
+      {
+        test: /\.less$/i,
+        use: [
+          // Creates `style` nodes from JS strings
+          "style-loader",
+          // Translates CSS into CommonJS
+          "css-loader",
+          // compiles Less to CSS
+          "less-loader",
+        ],
+      },
     ],
   },
   plugins: [
@@ -55,12 +58,15 @@ module.exports = {
       filename: 'remoteEntry.js',
       remoteType: 'commonjs-static',
       exposes: {
-        './ButtonStyleCss': './src/Button.styles.css',
+        './ButtonStyleCss': './src/Button.css',
         './ButtonStyleJss': './src/Button.styles.react-jss.js',
         './StyledButton': './src/StyledButton.js',
         './ButtonStyleCssModule': './src/Button.styles.module.css',
         './ButtonStyleScss': './src/Button.styles.scss',
-        // './ButtonStyleScssFile': './src/Button.styles.shared.scss',
+        './ButtonStyleLess': './src/Button.styles.less',
+        './TailwindButton': './src/Tailwind-button.js',
+        './TailwindCss': './src/tailwind.module.css',
+        './CssVariables': './src/variables.css',
       },
       shared: {
         react: { singleton: true },

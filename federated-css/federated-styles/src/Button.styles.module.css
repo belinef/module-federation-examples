@@ -1,7 +1,7 @@
 .yellow-button {
     background-color: yellow;
     border: 2px solid green;
-    width: 40%;
+    width: 50%;
     padding: 12px;
 }
 
@@ -9,7 +9,7 @@
 .red-button {
     background-color: blue;
     border: 2px solid green;
-    width: 40%;
+    width: 50%;
     padding: 12px;
     color: white;
 }
