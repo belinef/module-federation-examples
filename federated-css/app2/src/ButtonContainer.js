@@ -17,7 +17,7 @@ const style = {
 
 const ButtonContainer = () => (
   <div style={style}>
-    App 2 Container
+    React App Container
     <br />
     <br />
     <div className="red-button">  Red className Button Federated Css injected</div>

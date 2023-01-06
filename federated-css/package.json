@@ -5,7 +5,8 @@
       "app2",
       "app1",
       "app3",
-      "federated-styles"
+      "federated-styles",
+      "next-js-app"
     ]
   },
   "scripts": {

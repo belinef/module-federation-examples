@@ -69,8 +69,10 @@ module.exports = {
         './CssVariables': './src/variables.css',
       },
       shared: {
-        react: { singleton: true },
-        'react-dom': { singleton: true },
+        react: {
+          requiredVersion: false,
+          singleton: true,
+        },
       },
     }),
     new HtmlWebpackPlugin({

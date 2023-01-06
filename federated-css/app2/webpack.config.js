@@ -41,7 +41,12 @@ module.exports = {
         app3: `app3@${getRemoteEntryUrl(3003)}`,
         federated_styles: `federated_styles@${getRemoteEntryUrl(3004)}`,
       },
-      shared: { react: { singleton: true }, 'react-dom': { singleton: true } },
+      shared: {
+        react: {
+          requiredVersion: false,
+          singleton: true,
+        },
+      },
     }),
     new HtmlWebpackPlugin({
       template: './public/index.html',
