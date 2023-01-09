@@ -1,4 +1,5 @@
-.yellow-button {
+.yellow-button,
+.yellowButton {
     background-color: yellow;
     border: 2px solid green;
     width: 50%;
@@ -6,7 +7,8 @@
 }
 
 /* this button is blue actually */
-.red-button {
+.red-button,
+.redButton {
     background-color: blue;
     border: 2px solid green;
     width: 50%;

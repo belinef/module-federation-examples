@@ -56,7 +56,6 @@ module.exports = {
     new ModuleFederationPlugin({
       name: 'federated_styles',
       filename: 'remoteEntry.js',
-      remoteType: 'commonjs-static',
       exposes: {
         './ButtonStyleCss': './src/Button.css',
         './ButtonStyleJss': './src/Button.styles.react-jss.js',
@@ -67,6 +66,7 @@ module.exports = {
         './TailwindButton': './src/Tailwind-button.js',
         './TailwindCss': './src/tailwind.module.css',
         './CssVariables': './src/variables.css',
+        './CombinedStyles': './src/Combined.Styles.workaround.js',
       },
       shared: {
         react: {

@@ -3,17 +3,23 @@ const NextFederationPlugin = require('@module-federation/nextjs-mf/lib/NextFeder
 module.exports = {
   webpack(config, options) {
     if (!options.isServer) {
+      config.module.rules.push(
+          {
+              test: /\.css$/,
+              use: ["style-loader", "css-loader"],
+          },
+      );
       config.plugins.push(
         new NextFederationPlugin({
-          name: 'remote',
+          name: 'next_js_app',
           remotes: {
             app3: `app3@${getRemoteEntryUrl(3003)}`,
             federated_styles: `federated_styles@${getRemoteEntryUrl(3004)}`,
           },
           filename: 'static/chunks/remoteEntry.js',
           exposes: {
-            './nextjs-remote-component': './components/nextjs-remote-component.js',
-            './nextjs-remote-page': './pages/index.js',
+            './RemoteComponent': './components/nextjs-remote-page.js',
+            './RemotePage': './pages/index.js',
           },
           shared: {
             react: {

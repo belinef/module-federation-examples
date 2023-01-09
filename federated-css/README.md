@@ -7,6 +7,21 @@ This example demos loading nested remote components.
 - `app3` is a standalone application that exposes `Button` component.
 - `federated_styles` is a standalone application that exposes Css/Css Module/Scss/Less/TailwindCss/Jss/Styled-component/Css-variables.
 
+# Compare
+
+|           Exposed Styling | React                            | NextJs                               |
+|--------------------------:|----------------------------------|--------------------------------------|
+| Css                       | can import (affect global)       | N/A (global affect workaround exist) |
+| Scss                      | can import (affect global)       | N/A (global affect workaround exist) |
+| Less                      | can import (affect global)       | N/A (global affect workaround exist) |
+| Css Module                | can import (affect encapsulated) | N/A (dirty workaround exist)         |
+| react-jss                 | can import (affect encapsulated) | N/A (dirty workaround exist)         |
+| styled-components         | can import (affect encapsulated) | can import (affect encapsulated)     |
+| tailwind css (as module)  | can import (affect encapsulated) | N/A (dirty workaround exist)         |
+| tailwind styled component | can import (affect encapsulated) | can import (affect encapsulated)     |
+| Css variables in css      | can import (affect global)       | N/A (global affect workaround exist) |
+
+
 # Running Demo
 
 Run `yarn start`. This will build and serve both `app1`, `app2`, `app3`, `federated_styles` on ports 3001, 3002, 3003, 3004 respectively.
